@@ -1,11 +1,7 @@
 import * as React from 'react';
 
-import { Box, Button, Card, CardMedia, CardHeader, CardContent, Grid, Modal, Table, TableBody, TableContainer } from '@mui/material';
-// import CardContent from "@mui/material/CardContent";
-// import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { Button, CardMedia } from '@mui/material';
 import NewContactForm from './NewContactForm';
-// import { CardMedia } from '@mui/material';
 
 export default function AddContacts({ contactsList, setContactsList, requestSent, setRequestSent }) {
   const [open, setOpen] = React.useState(false);
