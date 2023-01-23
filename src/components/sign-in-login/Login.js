@@ -2,11 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { styled, alpha } from '@mui/material/styles';
 import { Link, Typography, Container, IconButton, InputAdornment, TextField, Button, CardHeader, Stack } from "@mui/material";
-import useResponsive from './useResponsive';
-import loginImage from "../assets/mailguy.jpeg"
-import customShadows from "../theme/customShadows";
-import palette from '../theme/palette';
-import Iconify from './iconify';
+import useResponsive from '../hooks/useResponsive';
+import loginImage from "../../assets/mailguy.jpeg"
+import customShadows from "../../theme/customShadows";
+import palette from '../../theme/palette';
+import Iconify from '../iconify';
 
 // ----------------------------------------------------------------------
 const color = palette.grey[500];

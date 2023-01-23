@@ -6,7 +6,7 @@ import { red } from "@mui/material/colors";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import EmojiPicker from 'emoji-picker-react';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
-import palette from '../theme/palette';
+import palette from '../../theme/palette';
 import { alpha } from '@mui/material/styles';
 // child components ---------------------------------------------------------
 import MsgSent from "./MsgSent";

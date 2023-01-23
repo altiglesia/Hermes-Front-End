@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Card, CardHeader, CardContent, Avatar, AvatarGroup, Typography } from '@mui/material';
 import { alpha } from '@mui/material/styles';
-import palette from '../theme/palette';
+import palette from '../../theme/palette';
 
 const color = palette.grey[500];
 

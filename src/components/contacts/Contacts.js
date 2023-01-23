@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Box, Button, Card, CardMedia, Grid, Modal } from '@mui/material';
 import AddContacts from "./AddContacts";
 import ContactTile from "./ContactTile";
-import GroupChatModal from "./GroupChatModal";
+import GroupChatModal from "../chatbox/GroupChatModal";
 import { useNavigate } from "react-router-dom";
 
 const style = {

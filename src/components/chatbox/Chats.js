@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ConvoFrame from "./ConvoFrame";
 import ChatSideBar from "./ChatSideBar";
-import useResponsive from "./useResponsive";
+import useResponsive from "../hooks/useResponsive";
 
 function Chats({ user, autoLogin, convoData, getConversations }) {
   const mdUp = useResponsive('up', 'md');

@@ -1,12 +1,12 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import Login from './Login';
+import Login from './sign-in-login/Login'
 import Home from './Home';
-import Chats from './Chats';
-import Contacts from './Contacts';
-import Profile from './Profile';
-import SignUp from "./SignUp";
+import Chats from './chatbox/Chats';
+import Contacts from './contacts/Contacts';
+import Profile from './profile/Profile';
+import SignUp from "./sign-in-login/SignUp";
 
 function Main({ user, setUser, autoLogin, setNotifications, counter }) {
     const [convoData, setConvoData] = useState({});

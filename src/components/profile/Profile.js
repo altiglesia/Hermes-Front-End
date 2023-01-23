@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Card, CardContent, CardHeader, CardMedia, Modal, Stack, TextField } from '@mui/material';
 import EditProfileModal from './EditProfileModal';
-import useResponsive from './useResponsive';
-import palette from '../theme/palette';
+import useResponsive from '../hooks/useResponsive';
+import palette from '../../theme/palette';
 import { alpha } from '@mui/material/styles';
 
 const style = {
