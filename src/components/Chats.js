@@ -3,7 +3,7 @@ import ConvoFrame from "./ConvoFrame";
 import ChatSideBar from "./ChatSideBar";
 import useResponsive from "./useResponsive";
 
-function Chats({ user, autoLogin, convoData, getConversations, counter }) {
+function Chats({ user, autoLogin, convoData, getConversations }) {
   const mdUp = useResponsive('up', 'md');
   const [selectedChat, setSelectedChat] = useState(convoData[0]);
 
