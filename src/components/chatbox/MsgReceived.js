@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
-import palette from '../theme/palette';
+import palette from '../../theme/palette';
 import { alpha } from '@mui/material/styles';
 
 const color = palette.grey[500];

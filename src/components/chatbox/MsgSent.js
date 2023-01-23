@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Button, Card, CardContent, TextField } from "@mui/material";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import palette from '../theme/palette';
+import palette from '../../theme/palette';
 import { alpha } from '@mui/material/styles';
 
 const color = palette.grey[500];
