@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { styled, alpha } from '@mui/material/styles';
-import { Link, Typography, Container, IconButton, InputAdornment, TextField, Button, CardHeader, Stack } from "@mui/material";
+import { Typography, Container, IconButton, InputAdornment, TextField, Button, CardHeader, Stack } from "@mui/material";
 import useResponsive from '../hooks/useResponsive';
 import loginImage from "../../assets/mailguy.jpeg"
 import customShadows from "../../theme/customShadows";
@@ -34,7 +34,6 @@ const StyledRoot = styled('div')(({ theme }) => ({
   const StyledContent = styled('div')(({ theme }) => ({
     maxWidth: 480,
     margin: 'auto',
-    // minHeight: '100vh',
     maxHeight: '100vh',
     overflowY: 'hidden',
     display: 'flex',
@@ -98,7 +97,7 @@ function Login({ user, setUser, getConversations }) {
                         </Typography>
                         <Typography variant="body2" sx={{ mb: 5 }}>
                             Don’t have an account? {''}
-                            <Link variant="subtitle2">Get started</Link>
+                            <Link to="/signup">Get started</Link>
                         </Typography>
                         <form onSubmit={handleSubmit}
                             style={{
@@ -108,27 +107,27 @@ function Login({ user, setUser, getConversations }) {
                         >
                             <Stack spacing={3}>
                                 <TextField 
-                                label="Username" 
-                                id="username" 
-                                name="username" 
-                                value={username} 
-                                onChange={(e) => setUsername(e.target.value)} />
+                                    label="Username" 
+                                    id="username" 
+                                    name="username" 
+                                    value={username} 
+                                    onChange={(e) => setUsername(e.target.value)} />
                                 <TextField 
-                                label="Password" 
-                                id="password" 
-                                type={showPassword ? 'text' : 'password'}
-                                name="password" 
-                                value={password} 
-                                onChange={(e) => setPassword(e.target.value)} 
-                                InputProps={{
-                                    endAdornment: (
-                                      <InputAdornment position="end">
-                                        <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
-                                          <Iconify icon={showPassword ? 'eva:eye-fill' : 'eva:eye-off-fill'} />
-                                        </IconButton>
-                                      </InputAdornment>
-                                    ),
-                                  }}
+                                    label="Password" 
+                                    id="password" 
+                                    type={showPassword ? 'text' : 'password'}
+                                    name="password" 
+                                    value={password} 
+                                    onChange={(e) => setPassword(e.target.value)} 
+                                    InputProps={{
+                                        endAdornment: (
+                                        <InputAdornment position="end">
+                                            <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
+                                            <Iconify icon={showPassword ? 'eva:eye-fill' : 'eva:eye-off-fill'} />
+                                            </IconButton>
+                                        </InputAdornment>
+                                        ),
+                                    }}
                                 />
                             <Button variant="contained" type="submit">Login</Button>
                             </Stack>

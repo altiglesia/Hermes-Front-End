@@ -2,13 +2,43 @@ import React, { useEffect, useState } from "react";
 import ConvoFrame from "./ConvoFrame";
 import ChatSideBar from "./ChatSideBar";
 import useResponsive from "../hooks/useResponsive";
+import { createConsumer } from "@rails/actioncable";
 
 function Chats({ user, autoLogin, convoData, getConversations }) {
   const mdUp = useResponsive('up', 'md');
   const [selectedChat, setSelectedChat] = useState(convoData[0]);
 
   useEffect(() => autoLogin(), [selectedChat])
-  useEffect(() => getConversations(), [user])
+  // useEffect(() => getConversations(), [user])
+
+  useEffect(() => {
+    getConversations()
+    // 1. create the connection to the backend
+    const cable = createConsumer("ws://localhost:3000/cable")
+    // 2. subscribe to the specific channel I care about
+
+    const params = {
+      channel: "MessageFeedChannel",
+      user_id: user.id,
+    }
+
+    const handlers = {
+      received(data) {
+        console.log(data)
+      },
+      connected() {
+        console.log('connected!')
+      },
+      disconnected() {
+        console.log('disconnected!')
+      },  
+    }
+
+    cable.subscriptions.create(params, handlers)
+    // 3. figure out how to add a new message from that channel
+    // when a new one comes in
+    // 4. unsubscribe from the channel when my component is done
+  }, [user.id]);
 
   function renderConversation(selectedConvoId) {
     const selectedConvo = convoData.find(convo => (convo.id === selectedConvoId))
